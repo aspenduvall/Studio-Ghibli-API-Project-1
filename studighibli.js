@@ -3,8 +3,8 @@ const baseURL = 'https://ghibliapi.herokuapp.com/films';
 // defining results section
 const results = document.querySelector('.results');
 
-function fetchResults() {
-    fetch(baseURL)
+async function fetchResults() {
+    await fetch(baseURL)
     .then(function(result) {
         return result.json();
     })
